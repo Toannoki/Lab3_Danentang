@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/main_layout.dart';
 import 'screens/detail_screen.dart';
 import 'screens/add_edit_screen.dart';
+import 'screens/category_detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,15 +19,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.indigo,
+          seedColor: Colors.blue,
           brightness: Brightness.light,
         ),
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => MainLayout(),
         '/detail': (context) => DetailScreen(),
         '/add': (context) => AddEditScreen(),
+        '/category_detail': (context) => CategoryDetailScreen(), // Màn hình mới
       },
     );
   }
